@@ -1,0 +1,30 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+<title>jtjjtj</title>
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+
+	<p>Щелкните на элемент, чтобы поднять его в списке.</p>
+	<ol>
+	<li onclick="move(this)">Мясо</li>
+	<li onclick="move(this)">Молоко</li>
+	<li onclick="move(this)">Яйца</li>
+	<li onclick="move(this)">Рыба</li>
+	<li onclick="move(this)">Соки</li>
+	<li onclick="move(this)">Воды</li>
+	</ol>
+	<script>
+	    function move(o){
+	        var parent = o.parentNode;
+	        parent.removeChild(o);
+        parent.insertBefore(o, parent.firstChild);
+    }
+</script>
+
+</body>
+
+</html>
