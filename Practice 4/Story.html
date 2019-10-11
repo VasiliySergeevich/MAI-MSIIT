@@ -1,0 +1,76 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+
+<html>
+
+<head>
+<title>Story</title>
+<style type="text/css">
+span.decision {
+	font-weight:bold;
+	border:thin solid #000000;
+	padding:5px;
+	background-color:#DDDDDD;
+}
+span.decisionhover {
+	font-weight:bold;
+	border:thin solid #000000;
+	padding:5px;
+	background-color:#EEBBEE;
+}
+</style>
+<script type="text/javascript">
+		var curScene = 0;
+
+	function changeScene(decision) {
+		var message = "";
+		if (curScene == 0) {
+		  curScene = 1;
+		  message = "Your journey begins at a fork in the road";
+		}
+		else if (curScene == 1) {
+		  if (decision == 1) {
+		    curScene = 2;
+		    message = "You have arrived at a cute home";
+		  }
+		  else {
+		    curScene = 3;
+		    message = "You have arrived at the Institute";
+		  }
+		}
+		else if (curScene == 2) {
+		  if (decision == 1) {
+		    curScene = 0;
+		  message = "You has slept all day and story has ended";
+		  }
+		  else {
+		    curScene = 4;
+		    message = "To be continued";
+		  }
+			
+		}
+		else if (curScene == 3) {
+		  if (decision == 1) {
+		    curScene = 0;
+		  message = "You has studied all day and story has ended";
+		  }
+		  else {
+		    curScene = 4;
+		    message = "To be continued";
+		  }
+		}
+	document.getElementById("sceneimg").src = "scene" + curScene + ".png";
+	if (message != "") 
+          alert(message);
+	}
+</script>
+</head>
+
+<body>
+	<div style "margin-top:100px"; text-align:center">
+		<img id="sceneimg" src="scene0.png" alt ="Student adventure"/><br>
+		Please choose:
+		<input type="button" id="decision1" value="1" onclick="changeScene(1)" />
+		<input type="button" id="decision2" value="2" onclick="changeScene(2)" />
+	</div>
+</body>
+</html>
