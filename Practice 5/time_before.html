@@ -1,0 +1,25 @@
+<HTML>
+    <HEAD>
+	<TITLE>Refresh</TITLE>
+    </HEAD>
+    <script type="text/javascript">
+      window.onload=function(){
+      var date = new Date();
+      var dateNewYear = new Date( date.getFullYear(), 11, 31, 24, 0, 0);
+      var delta = dateNewYear - date;
+      document.getElementById("div1").innerHTML = "Day(s): ".bold() + Math.floor(delta/24/60/60/1000);
+      document.getElementById("div2").innerHTML = "Hour(s): ".bold() + Math.floor(delta/60/60/1000%24);
+      document.getElementById("div3").innerHTML = "Minutes(s): ".bold() + Math.floor(delta/60/1000%60);
+      document.getElementById("div4").innerHTML = "Seconds(s): ".bold() + Math.floor(delta/1000%60);
+      setTimeout( 'window.location.reload();', 10000 );
+      }
+    </script>
+    <BODY>
+	<h2>Time to New Year:</h2>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>                    
+    </BODY>
+</HTML>
+
