@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog v.1.0 - The Blog about person's life</title>
+<script type="text/javascript">
+	function Blog(body, date) {
+		this.body = body;
+		this.date = date;
+	}
+	var blog = [ new Blog("Got the new book I ordered...", "28/08/2017"),
+		     new Blog("It was a pretty sunny day...", "14/08/2017"),
+		     new Blog("And now we begin to learn again", "01/09/2017"), 
+		     new Blog("I got a new bicycle and look forward to ride", "15/09/2017") ];
+	function showBlog(numEntries) {
+		if (!numEntries)
+		  numEntries = blog.length;
+		var i = 0, blogText = "";
+		while (i<blog.length && i<numEntries) {
+		  if (i % 2 == 0)
+		    blogText += "<p style='background-color:#EEEEEE'>"
+		  else
+		    blogText += "<p>";
+		  blogText += "<strong>" + blog[i].date + "</strong><br/>" + blog[i].body + "<p>";
+		  i++;
+		}
+		document.getElementById("blog").innerHTML = blogText;
+	}
+function sho() {
+alert(nonexistant);
+}
+</script>
+</head>
+<body onload="showBlog(5);">
+  <h3>The Blog about someone life</h3>
+  <img src="who.jpg" alt="math" />
+  <input type="button" id="search" value="Search the Blog" onclick="searchBlog();" />
+  <input type="text" id="searchtext" name="searchtext"  value="" /><p id="searchfail"></p>
+  <div id="blog"></div>
+  <input type="button" id="showall" value="Show All Blog Entries" onclick="showBlog();" />
+  <input type="button" id="randomBlog" value="View a Random Blog Entry" onclick="randomBlog();" />
+  <input type="button" id="rasdflog" value="Visdfstry" onclick="sho();" />
+
+</body>
+</html>
