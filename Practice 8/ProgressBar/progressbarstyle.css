@@ -1,0 +1,43 @@
+body
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:100%;
+ font-family: "Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+ background-color:#79F829;
+}
+#wrapper
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:995px;
+}
+#progressbarwrapper
+{
+ border:1px solid #088A08;
+ margin-left:345px;
+ margin-top:50px;
+ width:300px;
+ height:35px;
+ border-radius:3px;
+ overflow:hidden;
+}
+#progressbar
+{
+ width:0px;
+ height:35px;
+ border-radius:0px;
+ background-color:green;
+}
+#progressbardiv input[type="button"]
+{
+ background-color:#088A08;
+ border:none;
+ width:150px;
+ height:40px;
+ color:white;
+ border-radius:3px;
+ border-bottom:3px solid #0B610B;
+}

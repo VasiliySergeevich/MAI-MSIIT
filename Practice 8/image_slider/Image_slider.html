@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+		<title>Image_slider</title>
+<style type="text/css">
+.main_container
+{
+	width:496px;
+	height:500px;
+	border:1px solid blue;
+	margin: 0 auto;
+}
+.wrap
+{
+	border: 1px solid magenta;
+	width:150px;
+	height:150px;
+	margin-top:10px;
+	margin-left:10px;
+	float:left;
+	position:relative;
+	overflow:hidden;
+}
+img
+{
+	position:absolute;
+	top: 0;
+	left:0;	
+}
+</style>		
+        <script type="text/javascript" src="jquery-1.11.1.min.js"></script>        
+        <script type="text/javascript">        
+        $(function(){
+			$('.wrap').hover(function(){
+				$(this).children('.front').stop().animate({"top":'150px'},700);
+				
+				},function(){
+				$(this).children('.front').stop().animate({"top":'0'},300);
+				});
+			
+		});
+		
+		</script>
+        
+	</head>
+
+	<body>
+		<div class="main_container">
+			<div class="wrap">
+				<img src="thumb_1.jpg" alt="">
+				<img src="back1.jpg" class="front" alt="">
+			</div>
+			<div class="wrap">
+				<img src="thumb_2.jpg" alt="">
+				<img style="top: 0px;" src="back2.jpg" class="front" alt="">
+			</div>
+			<div class="wrap">
+				<img src="thumb_3.jpg" alt="">
+				<img style="top: 0px;" src="back3.jpg" class="front" alt="">
+			</div>
+		</div>
+</body></html>
